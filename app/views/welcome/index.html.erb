@@ -1,28 +1,56 @@
-<h1>/* App Name */</h1>
 
+ <script type="text/javascript">
+          $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+  </script>
+
+<div class="parallax-container">
+    <div class="parallax">
+      <%= image_tag "GuitarBackground.jpg" %>
+    </div>
+</div>
+
+  <div class="section amber accent-3">
+    <div class="row container">
+      
+<script type="text/javascript">
+          $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+</script>
 
 
 <audio src="<%= audio_path 'track.mp3'%>" type="audio/mpeg" controls>
     Your browser does not support the audio element.
 </audio>
+
 </br>
+
 <audio src="<%= audio_path 'hexa1.mp3'%>" type="audio/mpeg" controls>
     Your browser does not support the audio element.
 </audio>
+
 </br>
+
 <audio src="<%= audio_path 'hexa2.mp3'%>" type="audio/mpeg" controls>
     Your browser does not support the audio element.
 </audio>
 
 
-<script type="text/javascript">
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
-</script>
-<p>Playing a stored mp3</p>
+  <script type="text/javascript">
+  document.addEventListener('play', function(e){
+      var audios = document.getElementsByTagName('audio');
+      for(var i = 0, len = audios.length; i < len;i++){
+          if(audios[i] != e.target){
+              audios[i].pause();
+          }
+      }
+  }, true);
+  </script>
+
+    </div>
+</div>
+  <div class="parallax-container">
+    <div class="parallax"><%= image_tag "GuitarBackground2.jpg" %></div>
+  </div>

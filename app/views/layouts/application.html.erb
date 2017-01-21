@@ -1,14 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mp3app</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>AI Music Composer</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style type="text/css">
+    @font-face {
+  font-family: 'ecoico';
+  src:url('../fonts/timelineicons/ecoico.eot');
+  src:url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/timelineicons/ecoico.woff') format('woff'),
+    url('../fonts/timelineicons/ecoico.ttf') format('truetype'),
+    url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} /* Made with http://icomoon.io/ */
+  </style>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+<style>
+  .nav{
+    @extend .blue, .lighten-4;
+  }
+  hr {
+  border: 0;
+  width: 80%;
+  color: #4db6ac;
+  background-color: #4db6ac;
+  height: 5px;
+  }
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+          $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+</script>
+
+
+  <nav>
+    <div class="nav-wrapper amber accent-3">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#"  class="black-text">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <%= yield %>
+ 
+  <footer class="page-footer amber accent-3" style="margin-top:0px;  ">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">LET'S SOCIALIZE</h5>
+                <p class="black-text">I'd love to hear from you. Feel free to send me an email, find me on Google Plus, follow me on Twitter and join me on Facebook. </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a href="https://twitter.com/tweet_geetika">
+                  	<i class="fa fa-twitter fa-lg" aria-hidden="true" ></i>
+                  </a></li>
+                  <li><a href="https://www.facebook.com/geetikagulshan">
+                  	<i class="fa fa-facebook fa-lg " aria-hidden="true" style="color:#39559f"></i>
+                  </a></li>
+                  <li><a href="https://www.linkedin.com/in/singh-geetika">
+                  	<i class="fa fa-linkedin fa-lg" aria-hidden="true" style="color: #0072B1"></i>
+                  </a></li>
+                  <li><a href="https://plus.google.com/105498676557748850920">
+                  	<i class="fa fa-google-plus fa-lg" aria-hidden="true" style="color: #DC4A38"></i>
+                  </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            <span class="left black-text">© 2016 Pegasus. All rights reserved.</span>
+            <span class="right black-text">Site developed and maintained by Parardha Kumar</span>
+            </div>
+          </div>
+    </footer>
+                    
+</body>
 </html>
